@@ -1,3 +1,22 @@
+
+Ai-------6/23/2020 train step ----------
+
+setup: newpcamd, py2.7 native 
+
+ae_train exp_group/my_autoencoder -d
+	this will interactive train, show a window with 
+	  3 subwindow: train data, reconstructed, and gt
+	  in the window hit any key will move to next train sample
+
+ae_train exp_group/my_autoencoder 
+	this will perform 30000 iteration of training with no gui window.
+	  to run it more after 30000 iteration, need to change to iteration
+	  parameter in the configure file $AE_WORKSPACE_PATH/cfg/exp_group/my_autoencoder.cfg
+
+the train 3d object sample: see models/*.ply, wuson.ply does not work
+	obj_04.ply train well.
+	to train a different object, change my_autoencoder.cfg and change iteration #
+
 -------6/22/2020 --------------------
 newamdpc, ub18, data5
 AugumentedAutoencoder/

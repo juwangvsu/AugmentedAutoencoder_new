@@ -19,7 +19,8 @@ random.seed(12)
 def test_egl():
     # cad_path = '/home_local/sund_ma/data/linemod_dataset/models'
     # NOTE: in $ROOT, mkdir -p data; ln -sf /path/to/SIXD_DATASETS data/SIXD_DATASETS
-    cad_path = osp.join(cur_dir, '../data/SIXD_DATASETS/hinterstoisser/models')
+    cad_path = osp.join(cur_dir, '../models')
+    #cad_path = osp.join(cur_dir, '../data/SIXD_DATASETS/hinterstoisser/models')
     assert osp.exists(cad_path), "cad_path {} does not exist. Check your dataset path!".format(cad_path)
     K = np.array([[572.4114, 0.0, 325.2611], [0.0, 573.57043, 242.04899], [0.0, 0.0, 1.0]])
     height = 480
