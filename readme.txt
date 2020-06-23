@@ -2,6 +2,21 @@
 newamdpc, ub18, data5
 AugumentedAutoencoder/
 
+sudo apt-get install libglfw3-dev libglfw3  
+
+sudo apt-get install libassimp-dev  
+Tensorflow >= 1.6
+OpenCV >= 3.1
+
+pip install --user --pre --upgrade PyOpenGL PyOpenGL_accelerate
+pip install --user cython
+pip install --user cyglfw3
+pip install --user pyassimp==3.3
+pip install --user progressbar
+pip install configparser pyassimp
+pip2 install imageio==2.6.1
+pip install user imgaug
+
 initial setup:
 	scipy==1.14.1
 	pip install -r requirements.txt
@@ -10,9 +25,9 @@ initial setup:
 		auto_pose pkg has ae_init_workspace script to setup workspace.
 
 tensorflow 1.15.3
-	1.16 does not exist?
 	1.15 seems work fine with cuda10
-
+	1.6 - 1.12 requuire cuda9.0
+	1.13       require cuda10.0
 training:
 ae_train exp_group/my_autoencoder
 	ply file :
@@ -34,3 +49,8 @@ docker run --gpus all -it -v "${PWD}:/media/student/data5/AugmentedAutoencoder" 
 
 	6/23/20 native python2.7 + tensorflow-gpu 1.12	
 		...
+		ae_train exp_group/my_autoencoder -d 
+			work, show the gui
+		ae_train exp_group/my_autoencoder 
+			work, gpu 7gb, 3 hr.
+		to examine the result

@@ -8,3 +8,4 @@ install
 venv/
 workspace/
 autoencoder_ws
+autoencoder_ws_2
