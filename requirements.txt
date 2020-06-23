@@ -5,6 +5,7 @@ cyglfw3
 pyassimp==3.3
 imgaug
 progressbar
-tensorflow-gpu
+#tensorflow-gpu
 opencv-python
 numpy==1.17
+scipy==1.4.1
