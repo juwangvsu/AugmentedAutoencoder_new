@@ -19,6 +19,7 @@ def load_meshes_sixd( obj_files, vertex_tmp_store_folder , recalculate_normals=F
     hashed_file_name = hashlib.md5( (''.join(obj_files) + 'load_meshes_sixd' + str(recalculate_normals)).encode("utf-8")).hexdigest() + '.npy'
 
     out_file = os.path.join( vertex_tmp_store_folder, hashed_file_name)
+    print(out_file)
     if os.path.exists(out_file):
         return np.load(out_file, allow_pickle=True)
     else:

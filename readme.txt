@@ -67,7 +67,13 @@ docker run --gpus all -it -v "${PWD}:/media/student/data5/AugmentedAutoencoder" 
 	6/23/2020 dead end, docker image opengl not working with nvidia 
 
 	6/23/20 native python2.7 + tensorflow-gpu 1.12	
-		...
+		7/5/20 recheck
+
+		steps:
+			check /usr/local/cuda-10 folder
+			. ./init_env.sh
+		  	note: autoencoder_ws_2, don't use ~/bin/py36aae.sh	
+			
 		ae_train exp_group/my_autoencoder -d 
 			work, show the gui
 		ae_train exp_group/my_autoencoder 
