@@ -7,5 +7,5 @@ imgaug
 progressbar
 #tensorflow-gpu
 opencv-python
-numpy==1.17
+numpy==1.22.0
 scipy==1.4.1
